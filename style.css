@@ -1,0 +1,53 @@
+/* Google Fonts  */
+
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+
+/* Global  */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* Form  */
+
+form, table{
+  margin: 5rem;
+}
+
+input[type=number]{
+  margin: 0.75rem;
+  text-align: right;
+  width: 12vw;
+}
+
+button{
+  margin: 0.75rem;
+}
+
+fieldset{
+  border: 2px solid black;
+  border-radius: 12px;
+  height: 60vh;
+  width: 24vw;
+  padding: 2rem;
+}
+
+
+.table-responsive {
+  max-width: 36vw;
+  margin: 0 auto;
+}
+
+
+/* table{
+  padding: 20px;
+}
+
+th, td{
+  border: 1px solid black;
+} */
