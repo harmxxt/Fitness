@@ -13,15 +13,15 @@
 <body>
   <!-- Navbar  -->
 
-  <nav class="navbar navbar-expand-lg bg-warning px-5">
+  <nav class="navbar navbar-expand-lg px-5">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Be Fit</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-        <ul class="navbar-nav mb-2 mb-lg-0">
+      <div class="row collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+        <ul class="col-md-6 ms-auto navbar-nav mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
@@ -46,9 +46,118 @@
             <a class="nav-link" href="#">Contact</a>
           </li>
         </ul>
+        <div class="col-md-2 btns">
+          <button type="button" class="btn btn-link text-white" data-bs-toggle="modal" data-bs-target="#loginModal">
+            Login
+          </button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signUpModal">
+            Signup
+          </button>
+        </div>
       </div>
     </div>
+
   </nav>
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="loginModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Login</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sign Up Modal -->
+  <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="signUpModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="row g-3">
+            <div class="col-md-6">
+              <label for="inputEmail4" class="form-label">First Name</label>
+              <input type="text" class="form-control" aria-label="First name">
+            </div>
+            <div class="col-md-6">
+              <label for="inputEmail4" class="form-label">Last Name</label>
+              <input type="text" class="form-control" aria-label="Last name">
+            </div>
+            <div class="col-md-6">
+              <label for="inputEmail4" class="form-label">Email</label>
+              <input type="email" class="form-control" id="inputEmail4">
+            </div>
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Password</label>
+              <input type="password" class="form-control" id="inputPassword4">
+            </div>
+            <div class="col-12">
+              <label for="inputAddress" class="form-label">Address</label>
+              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+            <div class="col-md-6">
+              <label for="inputCity" class="form-label">City</label>
+              <input type="text" class="form-control" id="inputCity">
+            </div>
+            <div class="col-md-4">
+              <label for="inputState" class="form-label">State</label>
+              <select id="inputState" class="form-select">
+                <option selected>Punjab</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="col-md-2">
+              <label for="inputZip" class="form-label">Zip</label>
+              <input type="text" class="form-control" id="inputZip">
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                  Check me out
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Sign in</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Sign Up</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Home  -->
 
@@ -86,7 +195,20 @@
     </div>
   </div>
 
-  
+  <!-- about Us -->
+
+  <div class="aboutUs d-flex justify-content-center flex-wrap">
+    <div class="about">
+      <h1>About Us</h1>
+      <p>Welcome to our personal gym website, where fitness meets passion and dedication.
+        At our gym, we believe in empowering individuals to reach their fitness goals and lead a healthier lifestyle.
+        With state-of-the-art equipment, expert trainers, and a supportive community, we're here to inspire and guide you on your fitness journey.</p>
+        <button class="btn btn-success px-3">Read More</button>
+    </div>
+    <div>
+      <img style="height: 20rem;" class="img-fluid" src="/assets/img/pfp.png" alt="Profile">
+    </div>
+  </div>
 
   <!-- Footer  -->
 
@@ -96,8 +218,8 @@
       <!-- Section: Social media -->
       <section class="mb-4">
         <!-- Instagram -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><svg width="24px" height="24px"
-            viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" fill="none">
+        <a class="btn btn-floating m-1" href="https://www.instagram.com/harmxxt_/" role="button"><svg width="1rem"
+            height="1rem" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" fill="none">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
             <g id="SVGRepo_iconCarrier">
@@ -110,8 +232,9 @@
           </svg></a>
 
         <!-- Snapchat -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><svg width="24px" height="24px"
-            viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" fill="none">
+        <a class="btn btn-floating m-1" href="https://www.snapchat.com/add/harmxxt?share_id=EHPMF8Ys5Pc&locale=en-IN"
+          role="button"><svg width="1rem" height="1rem" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg"
+            fill="none">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
             <g id="SVGRepo_iconCarrier">
@@ -122,8 +245,8 @@
           </svg></a>
 
         <!-- Twitter -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><svg fill="#ffffff" width="24px"
-            height="24px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+        <a class="btn btn-floating m-1" href="https://twitter.com/harmxxt_" role="button"><svg fill="#ffffff"
+            width="1rem" height="1rem" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
             <g id="SVGRepo_iconCarrier">
@@ -134,9 +257,9 @@
           </svg></a>
 
         <!-- Linkedin -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><svg fill="#ffffff" version="1.1"
-            id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
-            height="24px" viewBox="0 0 552.77 552.77" xml:space="preserve">
+        <a class="btn btn-floating m-1" href="https://www.linkedin.com/in/harmxxt/" role="button"><svg fill="#ffffff"
+            version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="1rem" height="1rem" viewBox="0 0 552.77 552.77" xml:space="preserve">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
             <g id="SVGRepo_iconCarrier">
@@ -157,8 +280,8 @@
           </svg></a>
 
         <!-- Github -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><svg width="24px" height="24px"
-            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <a class="btn btn-floating m-1" href=https://github.com/HarmeetSingh69" role="button"><svg width="1rem"
+            height="1rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
             <g id="SVGRepo_iconCarrier">
