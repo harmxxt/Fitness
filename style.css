@@ -9,45 +9,33 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  color: white !important;
+  /* font-family: 'Poppins', sans-serif; */
 }
 
-
-/* Form  */
-
-form, table{
-  margin: 5rem;
+nav{
+  background-color: #d00000;
 }
 
-input[type=number]{
-  margin: 0.75rem;
-  text-align: right;
-  width: 12vw;
+.login{
+  margin-left: 5rem;
 }
 
-button{
-  margin: 0.75rem;
-}
-
-fieldset{
-  border: 2px solid black;
-  border-radius: 12px;
-  height: 60vh;
-  width: 24vw;
+form{
   padding: 2rem;
 }
 
-
-.table-responsive {
-  max-width: 36vw;
-  margin: 0 auto;
+.aboutUs{
+  background-color: #d00000;
 }
 
-
-/* table{
-  padding: 20px;
+.about{
+  width: 50vw;
+  padding: 5rem;
 }
 
-th, td{
-  border: 1px solid black;
-} */
+@media screen and (max-width: 768px) {
+  .about{
+    width: 100vw;
+  }
+}
