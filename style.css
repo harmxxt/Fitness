@@ -13,8 +13,22 @@
   /* font-family: 'Poppins', sans-serif; */
 }
 
+:root{
+  --primary: rgb(20, 20, 20);
+}
+
+/* Navbar */
+
 nav{
-  background-color: #d00000;
+  background-color: var(--primary);
+}
+
+nav .drop{
+  background-color: var(--primary);
+}
+
+nav .dropItem:hover{
+  color: var(--primary) !important;
 }
 
 .login{
@@ -25,8 +39,34 @@ form{
   padding: 2rem;
 }
 
-.aboutUs{
-  background-color: #d00000;
+/* Bmi */
+
+.bmi{
+  background-color: var(--primary);
+}
+
+#bmiForm{
+  width: 50vw;
+}
+
+.bmi input{
+  width: 15rem;
+  color: var(--primary) !important;
+}
+
+table,thead, td, th, tr{
+  background-color: var(--primary) !important;
+}
+
+#table{
+  width: 50vw;
+}
+
+
+/* About Us  */
+
+#aboutUs{
+  background-color: var(--primary);
 }
 
 .about{
@@ -34,8 +74,23 @@ form{
   padding: 5rem;
 }
 
+/* Contact Us  */
+
+#contactUs{
+  text-align: center;
+  background-color: var(--primary);
+}
+
+/* Media Query */
+
 @media screen and (max-width: 768px) {
   .about{
     width: 100vw;
+  }
+  .bmi{
+    flex-direction: column;
+  }
+  .bmi input{
+    width: 8rem;
   }
 }
