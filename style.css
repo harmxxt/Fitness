@@ -13,6 +13,10 @@
   /* font-family: 'Poppins', sans-serif; */
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 :root{
   --primary: rgb(20, 20, 20);
 }
@@ -38,6 +42,7 @@ nav .dropItem:hover{
 form{
   padding: 2rem;
 }
+
 
 /* Bmi */
 
@@ -79,6 +84,14 @@ table,thead, td, th, tr{
 #contactUs{
   text-align: center;
   background-color: var(--primary);
+}
+
+input{
+  color: var(--primary) !important;
+}
+
+textarea{
+  color: var(--primary) !important;
 }
 
 /* Media Query */
