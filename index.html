@@ -31,13 +31,9 @@
               Tools
             </a>
             <ul class="dropdown-menu drop">
-              <li><a class="dropdown-item dropItem" href="#bmi">BMI</a></li>
+              <li><a class="dropdown-item dropItem" href="#bmi">BMI Calculator</a></li>
               <li><a class="dropdown-item dropItem" href="#">Calories</a></li>
-              <li><a class="dropdown-item dropItem" href="#">Diet Plan</a></li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-              <li><a class="dropdown-item" href="#">Others</a></li>
+              <li><a class="dropdown-item dropItem" href="#">Diet Plans</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -213,11 +209,11 @@
         <form class="d-flex flex-column align-items-center justify-content-center ">
           <div class="mb-3">
             <label for="height" class="form-label">Height</label>
-            <input type="number" class="form-control" id="height" name="height">
+            <input type="number" class="form-control" id="height" name="height" placeholder="cm">
           </div>
           <div class="mb-3">
             <label for="weight" class="form-label">Weight</label>
-            <input type="number" class="form-control" id="weight" name="weight">
+            <input type="number" class="form-control" id="weight" name="weight" placeholder="kg">
           </div>
           <br>
           <button type="button" class="btn btn-primary" onclick="calculateBMI()">Calculate</button>
