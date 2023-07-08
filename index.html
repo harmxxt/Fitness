@@ -220,8 +220,8 @@
           <h5 id="result" style="color: whitesmoke;" class="mt-4"></h5>
         </form>
       </div>
-      <div class="container text-center" id="table">
-        <h3>BMI Chart</h3>
+      <div class="chart" id="table">
+        <h3>BMI Chart</h3> <br>
         <table class="table table-bordered">
           <thead>
             <tr>
@@ -261,6 +261,131 @@
             <tr>
               <td>Obese Class III</td>
               <td>&gt; 40</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <!-- Calories  -->
+
+  <div class="calories text-center p-5" id="calories">
+    <h1>Calories Calculator</h1>
+    <div class="calories d-flex align-items-center justify-content-center p-4">
+      <div class="container">
+        <h3 class="text-center">Enter your details to Calculate required Calories</h3>
+        <form class="d-flex flex-column align-items-center justify-content-center ">
+          <div class="mb-3">
+            <label for="age" class="form-label"><b>Age:</b></label>
+            <input type="number" class="form-control" id="age" name="age">
+          </div>
+          <!-- <div class="mb-3">
+            <label for="gender"><b>Gender:</b></label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="male">
+              <label class="form-check-label" for="flexRadioDefault1">
+                Male
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault">
+              <label class="form-check-label" for="flexRadioDefault2">
+                Female
+              </label>
+            </div>
+          </div> -->
+
+          <div class="mb-3">
+            <label for="gender"><b>Gender:</b></label>
+            <select id="gender" class="form-select">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="activity-level"><b>Activity Level:</b></label>
+            <select id="activity-level" class="form-select">
+              <option value="sedentary">Sedentary (little to no exercise)</option>
+              <option value="lightly-active">Lightly active (light exercise/sports 1-3 days/week)</option>
+              <option value="moderately-active">Moderately active (moderate exercise/sports 3-5 days/week)</option>
+              <option value="very-active">Very active (hard exercise/sports 6-7 days a week)</option>
+              <option value="extra-active">Extra active (very hard exercise/sports & physical job or 2x training)
+              </option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="height2" class="form-label"><b>Height:</b></label>
+            <input type="number" class="form-control" id="height2" name="height" placeholder="cm">
+          </div>
+          <div class="mb-3">
+            <label for="weight2" class="form-label"><b>Weight:</b></label>
+            <input type="number" class="form-control" id="weight2" name="weight" placeholder="kg">
+          </div>
+          <br>
+          <button type="button" class="btn btn-primary" onclick="calculateCalories()">Calculate</button>
+          <!-- <h5 id="resultCalories" style="color: whitesmoke;" class="mt-4"></h5> -->
+
+          <div id="result2" style="color: white;" class="mt-4">
+            <h2>Results</h2>
+            <p>Your daily calorie needs: <span id="calorie-result"></span> calories</p>
+          </div>
+        </form>
+      </div>
+      <div class="chart">
+        <h3>Weight Goals and Calorie Balance</h3> <br>
+        <table class="table table-bordered" id="table">
+          <thead>
+            <tr>
+              <th>Weight Goal</th>
+              <th>Calorie Surplus</th>
+              <th>Calorie Deficit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Lose 0.25 kg per week</td>
+              <td>-250</td>
+              <td>250</td>
+            </tr>
+            <tr>
+              <td>Lose 0.5 kg per week</td>
+              <td>-500</td>
+              <td>500</td>
+            </tr>
+            <tr>
+              <td>Lose 0.75 kg per week</td>
+              <td>-750</td>
+              <td>750</td>
+            </tr>
+            <tr>
+              <td>Lose 1 kg per week</td>
+              <td>-1000</td>
+              <td>1000</td>
+            </tr>
+            <tr>
+              <td>Maintain weight</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Gain 0.25 kg per week</td>
+              <td>250</td>
+              <td>-250</td>
+            </tr>
+            <tr>
+              <td>Gain 0.5 kg per week</td>
+              <td>500</td>
+              <td>-500</td>
+            </tr>
+            <tr>
+              <td>Gain 0.75 kg per week</td>
+              <td>750</td>
+              <td>-750</td>
             </tr>
           </tbody>
         </table>
@@ -422,13 +547,72 @@
 
 <script>
   function calculateBMI() {
-    var weight = parseFloat(document.getElementById("weight").value);
     var height = parseFloat(document.getElementById("height").value);
+    var weight = parseFloat(document.getElementById("weight").value);
 
     let bmi = weight / ((height / 100) ** 2);
 
     var resultElement = document.getElementById("result");
     resultElement.innerHTML = "Your BMI is: " + bmi.toFixed(2);
+  }
+
+  // function calculateCalories() {
+  //   var age = parseFloat(document.getElementById("age").value);
+  //   var height = parseFloat(document.getElementById("height2").value);
+  //   var weight = parseFloat(document.getElementById("weight2").value);
+
+  //   if (document.getElementById('male').checked == true) {
+  //     var cal = (10 * weight) + (6.25 * height) - (5 * age) + 5;
+  //   }
+  //   else {
+  //     var cal = (10 * weight) + (6.25 * height) - (5 * age) - 161;
+  //   }
+    
+  //   // var resultElement = document.getElementById("resultCalories");
+  //   // resultElement.innerHTML = "Your Calories requirement are: " + cal.toFixed(2);
+
+  //   document.getElementById('calorie-result').textContent = cal.toFixed(2);
+  //   document.getElementById('result').style.display = 'block';
+
+  // }
+
+  function calculateCalories() {
+    var weight = parseFloat(document.getElementById('weight2').value);
+    var height = parseFloat(document.getElementById('height2').value);
+    var age = parseInt(document.getElementById('age').value);
+    var gender = document.getElementById('gender').value;
+    var activityLevel = document.getElementById('activity-level').value;
+
+    var bmr = 0;
+
+    if (gender === 'male') {
+      bmr = 10 * weight + 6.25 * height - 5 * age + 5;
+    } else if (gender === 'female') {
+      bmr = 10 * weight + 6.25 * height - 5 * age - 161;
+    }
+
+    var calorieNeeds = 0;
+
+    switch (activityLevel) {
+      case 'sedentary':
+        calorieNeeds = bmr * 1.2;
+        break;
+      case 'lightly-active':
+        calorieNeeds = bmr * 1.375;
+        break;
+      case 'moderately-active':
+        calorieNeeds = bmr * 1.55;
+        break;
+      case 'very-active':
+        calorieNeeds = bmr * 1.725;
+        break;
+      case 'extra-active':
+        calorieNeeds = bmr * 1.9;
+        break;
+    }
+
+    document.getElementById('calorie-result').textContent = calorieNeeds.toFixed(2);
+    document.getElementById('result2').style.display = 'block';
   }
 </script>
 
