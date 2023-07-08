@@ -50,16 +50,16 @@ form{
   background-color: var(--primary);
 }
 
-#bmiForm{
+/* #bmiForm{
   width: 50vw;
-}
+} */
 
 .bmi input{
   width: 15rem;
   color: var(--primary) !important;
 }
 
-table,thead, td, th, tr{
+table, thead, td, th, tr{
   background-color: var(--primary) !important;
 }
 
@@ -67,6 +67,11 @@ table,thead, td, th, tr{
   width: 50vw;
 }
 
+/* Calories */
+
+#calories{
+  background-color: var(--primary);
+}
 
 /* About Us  */
 
@@ -86,7 +91,7 @@ table,thead, td, th, tr{
   background-color: var(--primary);
 }
 
-input{
+input, select, option{
   color: var(--primary) !important;
 }
 
@@ -104,6 +109,12 @@ textarea{
     flex-direction: column;
   }
   .bmi input{
+    width: 8rem;
+  }
+  .calories{
+    flex-direction: column;
+  }
+  .calories input[type=number]{
     width: 8rem;
   }
 }
