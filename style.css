@@ -27,6 +27,9 @@ nav .drop{
 
 nav .dropItem:hover{
   color: var(--primary) !important;
+  border-radius: .5rem;
+  padding: .5rem;
+  display: inline-block;
 }
 
 nav a:hover{
