@@ -32,6 +32,8 @@ nav .dropItem:hover{
 nav a:hover{
   color: var(--primary) !important;
   background-color: whitesmoke;
+  border-radius: .5rem;
+  padding: .5rem;
 }
 
 .login{
@@ -101,6 +103,9 @@ textarea{
 /* Media Query */
 
 @media screen and (max-width: 768px) {
+  nav ul{
+    align-items: center;
+  }
   .about{
     width: 100vw;
   }
