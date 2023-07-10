@@ -34,6 +34,7 @@ nav a:hover{
   background-color: whitesmoke;
   border-radius: .5rem;
   padding: .5rem;
+  display: inline-block;
 }
 
 .login{
@@ -103,9 +104,6 @@ textarea{
 /* Media Query */
 
 @media screen and (max-width: 768px) {
-  nav ul{
-    align-items: center;
-  }
   .about{
     width: 100vw;
   }
