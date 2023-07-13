@@ -2,184 +2,577 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Be Fit!</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <nav>
-    <div class="logo">
-      Fashion
-    </div>
-    <a href="#" class="toggler">
-      &#9776
-    </a>
-    <div class="nav-links">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Dress</a></li>
-        <li><a href="#">Jacket</a></li>
-        <li><a href="#">Sweater</a></li>
-        <li><a href="#">Kids</a></li>
-        <li><a href="#">Shoes</a></li>
-      </ul>
-    </div>
-    <div class="nav-btns">
-      <button>
-        Login
+  <!-- Navbar  -->
+
+  <nav class="navbar navbar-expand-lg px-5">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Be Fit</a>
+      <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon navbar-light"></span>
       </button>
-      <button>
-        Signup
-      </button>
+      <div class="row collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+        <ul class="col-md-6 ms-auto navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item px-2">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item dropdown px-2">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Tools
+            </a>
+            <ul class="dropdown-menu drop">
+              <li><a class="dropdown-item dropItem" href="#bmi">BMI Calculator</a></li>
+              <li><a class="dropdown-item dropItem" href="#calories">Calories Calculator</a></li>
+              <li><a class="dropdown-item dropItem" href="https://www.google.com/maps/search/gym/">Gyms near me</a></li>
+            </ul>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="#aboutUs">About Us</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="#contactUs">Contact</a>
+          </li>
+        </ul>
+        <div class="col-md-2 btns">
+          <button type="button" class="btn btn-link text-white" data-bs-toggle="modal" data-bs-target="#loginModal">
+            Login
+          </button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signUpModal">
+            Signup
+          </button>
+        </div>
+      </div>
     </div>
+
   </nav>
 
-  <section class="home">
-    <div class="text">
-      <h1>Get upto 30% Off <br>New Arrivals</h1> <br>
-      <button>Shop Now</button>
-    </div>
-    <div class="pic">
-      <img src="./assets/images/hero.jpg" alt="/">
-    </div>
-  </section>
-
-  <section class="features">
-    <div class="item">
-      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-        width="4rem" height="4rem" viewBox="0 0 40 32" enable-background="new 0 0 40 32" xml:space="preserve"
-        fill="#000000">
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-        <g id="SVGRepo_iconCarrier">
-          <g>
-            <path fill="#000000"
-              d="M22.5,0h-21C0.673,0,0,0.673,0,1.5v22C0,24.327,0.673,25,1.5,25h21c0.827,0,1.5-0.673,1.5-1.5v-22 C24,0.673,23.327,0,22.5,0z M23,23.5c0,0.275-0.225,0.5-0.5,0.5h-21C1.225,24,1,23.775,1,23.5v-22C1,1.225,1.225,1,1.5,1h21 C22.775,1,23,1.225,23,1.5V23.5z">
-            </path>
-            <path fill="#000000"
-              d="M36.225,5.811C35.966,5.311,35.455,5,34.892,5H28.5C27.673,5,27,5.673,27,6.5v8c0,0.827,0.673,1.5,1.5,1.5 H35c0.276,0,0.5-0.224,0.5-0.5S35.276,15,35,15h-6.5c-0.275,0-0.5-0.225-0.5-0.5v-8C28,6.225,28.225,6,28.5,6h6.392 c0.188,0,0.358,0.104,0.444,0.271l3.609,6.96C38.98,13.299,39,13.378,39,13.458V23.5c0,0.275-0.225,0.5-0.5,0.5H27 c-0.276,0-0.5,0.224-0.5,0.5S26.724,25,27,25h11.5c0.827,0,1.5-0.673,1.5-1.5V13.458c0-0.241-0.059-0.48-0.168-0.69L36.225,5.811z">
-            </path>
-            <path fill="#000000"
-              d="M20,14H5c-0.276,0-0.5,0.224-0.5,0.5S4.724,15,5,15h15c0.276,0,0.5-0.224,0.5-0.5S20.276,14,20,14z">
-            </path>
-            <path fill="#000000"
-              d="M36.5,27c-0.276,0-0.5,0.224-0.5,0.5c0,1.93-1.57,3.5-3.5,3.5S29,29.43,29,27.5c0-0.276-0.224-0.5-0.5-0.5 S28,27.224,28,27.5c0,2.481,2.019,4.5,4.5,4.5s4.5-2.019,4.5-4.5C37,27.224,36.776,27,36.5,27z">
-            </path>
-            <path fill="#000000"
-              d="M11.5,27c-0.276,0-0.5,0.224-0.5,0.5c0,1.93-1.57,3.5-3.5,3.5S4,29.43,4,27.5C4,27.224,3.776,27,3.5,27 S3,27.224,3,27.5C3,29.981,5.019,32,7.5,32s4.5-2.019,4.5-4.5C12,27.224,11.776,27,11.5,27z">
-            </path>
-          </g>
-        </g>
-      </svg>
-      <div class="text">
-        <p><b>Free Shipping</b></p>
-        <p>
-          "Experience the convenience of free delivery, right at your doorstep."
-        </p>
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="loginModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control bg-dark" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control bg-dark" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input bg-dark" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Login</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        </div>
       </div>
     </div>
-    <div class="item">
-      <svg width="4rem" height="4rem" viewBox="0 0 1024 1024" fill="#000000" class="icon" version="1.1"
-        xmlns="http://www.w3.org/2000/svg">
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-        <g id="SVGRepo_iconCarrier">
-          <path
-            d="M488.006 999.898C218.982 999.898 0.106 781.022 0.106 512c0-269.022 218.876-487.898 487.9-487.898 156.624 0 304.81 76.03 396.386 203.364a8.016 8.016 0 0 1-1.828 11.17c-3.61 2.562-8.592 1.766-11.17-1.828C782.818 113.63 639.49 40.1 488.006 40.1 227.792 40.098 16.104 251.788 16.104 512c0 260.21 211.69 471.902 471.902 471.902 260.21 0 471.902-211.692 471.902-471.902a7.992 7.992 0 0 1 7.998-7.998 7.994 7.994 0 0 1 7.998 7.998c0 269.022-218.876 487.898-487.898 487.898z"
-            fill=""></path>
-          <path
-            d="M1015.896 567.988a7.976 7.976 0 0 1-5.656-2.344l-47.99-47.99a7.996 7.996 0 1 1 11.31-11.31l47.99 47.992a7.994 7.994 0 0 1 0 11.308 7.96 7.96 0 0 1-5.654 2.344z"
-            fill=""></path>
-          <path
-            d="M919.916 567.988a7.994 7.994 0 0 1-5.656-13.652l47.99-47.992a7.996 7.996 0 1 1 11.31 11.31l-47.99 47.99a7.96 7.96 0 0 1-5.654 2.344zM727.956 735.954H280.048c-4.422 0-8-3.578-8-7.998V376.028a7.994 7.994 0 0 1 8-7.998h447.906c4.422 0 8 3.578 8 7.998v351.928a7.994 7.994 0 0 1-7.998 7.998z m-439.91-15.996h431.91V384.026H288.046v335.932z"
-            fill=""></path>
-          <path
-            d="M727.956 384.026H280.048a8.002 8.002 0 0 1-7.39-4.936 8.018 8.018 0 0 1 1.734-8.716l63.988-63.986a7.992 7.992 0 0 1 5.656-2.344h319.934c2.124 0 4.154 0.844 5.654 2.344l63.988 63.986a8.02 8.02 0 0 1 1.734 8.716 8.002 8.002 0 0 1-7.39 4.936z m-428.598-15.996h409.29l-47.99-47.99H347.346l-47.988 47.99z"
-            fill=""></path>
-          <path
-            d="M456.012 384.026a8.008 8.008 0 0 1-7.156-11.576l31.994-63.988c2-3.936 6.78-5.546 10.732-3.578a8.006 8.006 0 0 1 3.578 10.732l-31.994 63.986a8.014 8.014 0 0 1-7.154 4.424zM551.992 384.026a8.016 8.016 0 0 1-7.154-4.42l-31.994-63.986a8.006 8.006 0 0 1 3.578-10.732 7.992 7.992 0 0 1 10.732 3.578l31.992 63.988a8.006 8.006 0 0 1-3.578 10.732 7.992 7.992 0 0 1-3.576 0.84z"
-            fill=""></path>
-          <path
-            d="M456.012 448.014a7.994 7.994 0 0 1-7.998-8v-63.988c0-4.42 3.578-7.998 7.998-7.998s7.998 3.578 7.998 7.998v63.988c0 4.422-3.578 8-7.998 8z"
-            fill=""></path>
-          <path
-            d="M551.992 448.014h-95.98c-4.42 0-7.998-3.578-7.998-8s3.578-7.998 7.998-7.998h95.98c4.42 0 7.998 3.578 7.998 7.998s-3.578 8-7.998 8z"
-            fill=""></path>
-          <path
-            d="M551.992 448.014a7.994 7.994 0 0 1-7.998-8v-63.988a7.994 7.994 0 0 1 7.998-7.998 7.994 7.994 0 0 1 7.998 7.998v63.988c0 4.422-3.578 8-7.998 8zM456.012 456.012a7.994 7.994 0 0 1-7.998-7.998v-8c0-4.42 3.578-7.998 7.998-7.998s7.998 3.578 7.998 7.998v8a7.994 7.994 0 0 1-7.998 7.998zM488.006 456.012c-4.422 0-8-3.578-8-7.998v-8a7.994 7.994 0 0 1 8-7.998 7.994 7.994 0 0 1 7.998 7.998v8a7.994 7.994 0 0 1-7.998 7.998zM519.998 456.012a7.994 7.994 0 0 1-7.998-7.998v-8a7.994 7.994 0 0 1 7.998-7.998c4.422 0 8 3.578 8 7.998v8a7.994 7.994 0 0 1-8 7.998z"
-            fill=""></path>
-          <path
-            d="M551.992 456.012a7.994 7.994 0 0 1-7.998-7.998v-8a7.994 7.994 0 0 1 7.998-7.998 7.994 7.994 0 0 1 7.998 7.998v8a7.994 7.994 0 0 1-7.998 7.998zM695.962 703.96h-31.994a7.994 7.994 0 0 1-7.998-8v-31.992c0-4.422 3.578-8 7.998-8h31.994a7.994 7.994 0 0 1 7.998 8v31.992c0 4.422-3.578 8-7.998 8z m-23.996-15.998h15.996v-15.996h-15.996v15.996zM631.974 703.96h-31.992a7.994 7.994 0 0 1-7.998-8v-31.992c0-4.422 3.576-8 7.998-8h31.992c4.422 0 8 3.578 8 8v31.992c0 4.422-3.578 8-8 8z m-23.994-15.998h15.996v-15.996h-15.996v15.996zM472.008 671.966H312.04a7.994 7.994 0 0 1-7.998-7.998c0-4.422 3.578-8 7.998-8h159.968a7.994 7.994 0 0 1 7.998 8 7.994 7.994 0 0 1-7.998 7.998zM392.026 703.96h-79.984a7.994 7.994 0 0 1-7.998-8 7.994 7.994 0 0 1 7.998-7.998h79.984a7.994 7.994 0 0 1 7.998 7.998c0 4.422-3.578 8-7.998 8z"
-            fill=""></path>
-        </g>
-      </svg>
-      <div class="text">
-        <p><b>Easy Return</b></p>
-        <p>
-          "Making it effortless to exchange within 7 days of purchase"
-        </p>
+  </div>
+
+  <!-- Sign Up Modal -->
+  <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="signUpModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="row g-3">
+            <div class="col-md-6">
+              <label for="inputEmail4" class="form-label">First Name</label>
+              <input type="text" class="form-control bg-dark" aria-label="First name">
+            </div>
+            <div class="col-md-6">
+              <label for="inputEmail4" class="form-label">Last Name</label>
+              <input type="text" class="form-control bg-dark" aria-label="Last name">
+            </div>
+            <div class="col-md-6">
+              <label for="inputEmail4" class="form-label">Email</label>
+              <input type="email" class="form-control bg-dark" id="inputEmail4">
+            </div>
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Password</label>
+              <input type="password" class="form-control bg-dark" id="inputPassword4">
+            </div>
+            <div class="col-12">
+              <label for="inputAddress" class="form-label">Address</label>
+              <input type="text" class="form-control bg-dark" id="inputAddress" placeholder="1234 Main St">
+            </div>
+            <div class="col-md-6">
+              <label for="inputCity" class="form-label">City</label>
+              <input type="text" class="form-control bg-dark" id="inputCity">
+            </div>
+            <div class="col-md-4">
+              <label for="inputState" class="form-label">State</label>
+              <select id="inputState" class="form-select bg-dark text-white">
+                <option selected>Punjab</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="col-md-2">
+              <label for="inputZip" class="form-label">Zip</label>
+              <input type="text" class="form-control bg-dark" id="inputZip">
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input bg-dark" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                  Check me out
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Sign in</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Sign Up</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        </div>
       </div>
     </div>
-    <div class="item">
-      <svg fill="#000000" width="4rem" height="4rem" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-        <g id="SVGRepo_iconCarrier">
-          <g id="a"></g>
-          <g id="b">
-            <path
-              d="M26.5,51c1.3789,0,2.5-1.1211,2.5-2.5s-1.1211-2.5-2.5-2.5-2.5,1.1211-2.5,2.5,1.1211,2.5,2.5,2.5Zm0-4c.8271,0,1.5,.6729,1.5,1.5s-.6729,1.5-1.5,1.5-1.5-.6729-1.5-1.5,.6729-1.5,1.5-1.5Zm1.0254-18.9443c-.6943-.46-1.0898-.7627-1.1455-.8086-.0186-.127,.0234-.2441,.0703-.2969,.0156-.0186,.0303-.0352,.1006-.04,.1572-.002,.2617,.1045,.2676,.1113,.4609,.6377,1.3604,.8164,2.0488,.4062,.6826-.4043,.8916-1.25,.4854-1.9678-.3096-.5462-1.1729-1.2924-2.4286-1.4048-.0156-.0726-.0285-.1354-.0327-.1725-.0724-.444-.7509-.436-.8206,0l-.0422,.2158c-.7497,.1201-1.421,.4658-1.9034,1.0188-.6045,.6904-.874,1.6113-.7402,2.5264,.1904,1.292,1.4189,2.1074,2.4072,2.7637,.3105,.2061,.9561,.6348,1.0645,.8047,.0928,.1523,.1816,.3721,.0762,.5537-.085,.1455-.2637,.2373-.4971,.2539-.1924,.0078-.5342-.291-.6699-.498-.4258-.6729-1.3262-.8975-2.0449-.5068-.6699,.3633-.9062,1.1299-.5869,1.9072,.3528,.8613,1.5208,1.7751,2.8857,1.934l.0511,.2616c.0697,.436,.7482,.4439,.8206,0,.0062-.0555,.0311-.1678,.0576-.29,1.1255-.1612,2.1003-.7606,2.6313-1.6771,.6045-1.043,.5654-2.2734-.1074-3.376-.4355-.7168-1.2041-1.2256-1.9473-1.7188Zm1.1895,4.5928c-.4102,.71-1.2041,1.1709-2.1182,1.2344l-.1699,.0059c-1.125,0-2.1377-.7842-2.3672-1.3467-.0586-.1406-.1611-.4863,.1367-.6475,.085-.0459,.1787-.0684,.2715-.0684,.1826,0,.3613,.085,.458,.2373,.0059,.0098,.6982,1.0029,1.584,.9531,.5635-.0391,1.0322-.3115,1.2871-.748,.2715-.4688,.2393-1.0439-.0869-1.5781-.2012-.3291-.6924-.6699-1.3662-1.1172-.8643-.5742-1.8447-1.2246-1.9688-2.0742-.0928-.626,.0908-1.2539,.5029-1.7236,.3721-.4268,.9131-.6855,1.5215-.7285,1.1299-.0791,1.8955,.5742,2.083,.9053,.1055,.1875,.1367,.46-.126,.6152-.2393,.1416-.5723,.084-.7383-.1465-.1016-.1289-.4688-.5527-1.1348-.5088-.3203,.0234-.585,.1504-.7861,.3789-.251,.2881-.3662,.6992-.3076,1.1006,.0557,.3809,.4258,.7314,1.583,1.498,.6523,.4316,1.3262,.8789,1.6465,1.4053,.4766,.7803,.5107,1.6377,.0957,2.3535Zm26.0879-12.5459c-.123-.0938-.2822-.124-.4355-.085-.0156,.0059-1.6318,.4346-3.3975-.3428-.5264-.2314-1.127-.5078-1.7568-.7969-1.9437-.8945-3.9327-1.8059-5.2129-2.1177v-2.2603c0-2.4814-2.0186-4.5-4.5-4.5H13.5c-2.4814,0-4.5,2.0186-4.5,4.5V49.5c0,2.4814,2.0186,4.5,4.5,4.5h26c2.4814,0,4.5-2.0186,4.5-4.5v-15.8103c.3678,.1519,.7612,.3335,1.1855,.533,1.6982,.7969,3.8115,1.7891,6.4727,1.7891,2.1777,0,3.1797-1.1377,3.2207-1.1855,.0781-.0908,.1211-.207,.1211-.3262v-14c0-.1562-.0732-.3027-.1973-.3975Zm-.8027,14.1836c-.2754,.2324-1.0186,.7256-2.3418,.7256-2.4375,0-4.4395-.9395-6.0479-1.6943-1.0498-.4932-1.957-.9189-2.7715-.9893-.5498-.0479-1.1416-.0752-1.7471-.1025-2.2402-.1035-4.7783-.2217-5.752-1.4678-.3682-.4717-.4424-1.1826-.1895-1.8135,.3125-.7754,1.0566-1.3018,2.043-1.4434,.7441-.1074,1.6709-.1426,2.6533-.1807,2.3857-.0908,5.0898-.1943,6.9961-1.3281,.2373-.1406,.3154-.4482,.1738-.6855-.1426-.2373-.4492-.3145-.6855-.1738-1.6865,1.0039-4.2559,1.1016-6.5225,1.1885-.4174,.0157-.8212,.0326-1.2123,.0535-1.4095-5.455-6.4222-9.3748-12.0963-9.3748-6.8926,0-12.5,5.6074-12.5,12.5s5.6074,12.5,12.5,12.5c5.582,0,10.4257-3.6604,11.9813-8.9614,.8444,.1016,1.7225,.1468,2.5646,.186,.5918,.0273,1.1699,.0537,1.707,.0996,.0767,.0066,.1649,.0322,.2471,.048v16.1277c0,1.9297-1.5703,3.5-3.5,3.5H13.5c-1.9297,0-3.5-1.5703-3.5-3.5V14.5c0-1.9297,1.5703-3.5,3.5-3.5h26c1.9297,0,3.5,1.5703,3.5,3.5v2.1494c-1.6783,.1625-5.3053,2.1736-5.7402,2.4122-.2422,.1328-.3311,.4365-.1982,.6787,.1338,.2432,.4385,.3301,.6787,.1982,1.6641-.9111,4.6211-2.3096,5.5303-2.2979,.9609,.0459,3.4912,1.21,5.5244,2.1455,.6348,.292,1.2412,.5713,1.7725,.8047,1.3877,.6094,2.6914,.5908,3.4326,.5039v13.1914Zm-19.4482-2.9131c.6519,.8354,1.7186,1.2675,2.9341,1.5099-1.4708,4.8082-5.8954,8.1171-10.9859,8.1171-6.3408,0-11.5-5.1592-11.5-11.5s5.1592-11.5,11.5-11.5c5.1597,0,9.7238,3.5217,11.0817,8.4492-.1823,.0181-.3618,.0373-.5309,.0616-1.3486,.1943-2.3789,.9453-2.8281,2.0605-.3896,.9697-.2637,2.043,.3291,2.8018Z">
-            </path>
-          </g>
-        </g>
-      </svg>
-      <div class="text">
-        <p><b>Secure Payment</b></p>
-        <p>
-          "Experience peace of mind with secure payment, transactions are protected."
-        </p>
+  </div>
+
+  <!-- Home  -->
+
+  <div class="home">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="4000">
+          <img src="./assets/img/carousel-1.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img src="./assets/img/carousel-2.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img src="./assets/img/carousel-3.jpg" class="d-block w-100" alt="..." />
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <br>
+
+  <!-- Tools -->
+
+  <!-- BMI -->
+
+  <div class="bmi text-center p-5" id="bmi">
+    <h1><b>BMI Calculator</b></h1>
+    <div class="bmi d-flex align-items-center justify-content-center p-4">
+      <div class="container" id="bmiForm">
+        <h2 class="text-center">Enter your details to Calculate BMI</h2>
+        <form class="d-flex flex-column align-items-center justify-content-center ">
+          <div class="mb-3">
+            <label for="height" class="form-label">Height</label>
+            <input type="number" class="form-control" id="height" name="height" placeholder="cm" required>
+          </div>
+          <div class="mb-3">
+            <label for="weight" class="form-label">Weight</label>
+            <input type="number" class="form-control" id="weight" name="weight" placeholder="kg" required>
+          </div>
+          <br>
+          <button type="button" class="btn btn-primary" onclick="calculateBMI()">Calculate</button>
+          <h5 id="result" style="color: whitesmoke;" class="mt-4"></h5>
+        </form>
+      </div>
+      <div class="chart" id="table">
+        <h3>BMI Chart</h3> <br>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>BMI Range (kg/m<sup>2</sup>)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Severe Thinness</td>
+              <td>&lt; 16</td>
+            </tr>
+            <tr>
+              <td>Moderate Thinness</td>
+              <td>16 - 17</td>
+            </tr>
+            <tr>
+              <td>Mild Thinness</td>
+              <td>17 - 18.5</td>
+            </tr>
+            <tr>
+              <td>Normal</td>
+              <td>18.5 - 25</td>
+            </tr>
+            <tr>
+              <td>Overweight</td>
+              <td>25 - 30</td>
+            </tr>
+            <tr>
+              <td>Obese Class I</td>
+              <td>30 - 35</td>
+            </tr>
+            <tr>
+              <td>Obese Class II</td>
+              <td>35 - 40</td>
+            </tr>
+            <tr>
+              <td>Obese Class III</td>
+              <td>&gt; 40</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section class="women">
-    <div class="text">
-      <svg fill="#de3c4b" height="4rem" width="4rem" version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve">
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-        <g id="SVGRepo_iconCarrier">
-          <g>
-            <path
-              d="M16.9,15.8l-0.5-2l2-0.5c0.5-0.1,0.9-0.7,0.7-1.2c-0.1-0.5-0.7-0.9-1.2-0.7l-2.5,0.7l-2.8-1.6l2.8-1.6l2.5,0.7 c0.1,0,0.2,0,0.3,0c0.4,0,0.8-0.3,1-0.7c0.1-0.5-0.2-1.1-0.7-1.2l-2-0.5l0.5-2c0.1-0.5-0.2-1.1-0.7-1.2c-0.5-0.1-1.1,0.2-1.2,0.7 l-0.7,2.5l-2.8,1.6V5.6l1.9-1.9c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0l-1.4,1.4L9.1,2.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l1.9,1.9v3.2 L6.7,7.2L6,4.6C5.9,4.1,5.4,3.8,4.8,3.9C4.3,4.1,4,4.6,4.1,5.2l0.5,2l-2,0.5C2.1,7.8,1.8,8.3,2,8.9c0.1,0.4,0.5,0.7,1,0.7 c0.1,0,0.2,0,0.3,0l2.5-0.7l2.8,1.6l-2.8,1.6l-2.5-0.7c-0.5-0.1-1.1,0.2-1.2,0.7s0.2,1.1,0.7,1.2l2,0.5l-0.5,2 c-0.1,0.5,0.2,1.1,0.7,1.2c0.1,0,0.2,0,0.3,0c0.4,0,0.8-0.3,1-0.7l0.7-2.5l2.8-1.6v3.2l-1.9,1.9c-0.4,0.4-0.4,1,0,1.4s1,0.4,1.4,0 l1.4-1.4l1.4,1.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3c0.4-0.4,0.4-1,0-1.4l-1.9-1.9v-3.2l2.8,1.6l0.7,2.5 c0.1,0.4,0.5,0.7,1,0.7c0.1,0,0.2,0,0.3,0C16.7,16.9,17,16.4,16.9,15.8z">
-            </path>
-            <path
-              d="M28.7,23.6l-1.9,0.5L25,23l1.8-1.1l1.9,0.5c0.1,0,0.2,0,0.3,0c0.4,0,0.8-0.3,1-0.7c0.1-0.5-0.2-1.1-0.7-1.2l-1.4-0.4 l0.4-1.4c0.1-0.5-0.2-1.1-0.7-1.2c-0.5-0.1-1.1,0.2-1.2,0.7l-0.5,1.9L24,21.3v-2.1l1.4-1.4c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0l-1,1 l-1-1c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l1.4,1.4v2.1l-1.8-1.1l-0.5-1.9c-0.1-0.5-0.7-0.9-1.2-0.7c-0.5,0.1-0.9,0.7-0.7,1.2 l0.4,1.4l-1.4,0.4c-0.5,0.1-0.9,0.7-0.7,1.2c0.1,0.4,0.5,0.7,1,0.7c0.1,0,0.2,0,0.3,0l1.9-0.5L21,23l-1.8,1.1l-1.9-0.5 c-0.5-0.1-1.1,0.2-1.2,0.7c-0.1,0.5,0.2,1.1,0.7,1.2l1.4,0.4l-0.4,1.4c-0.1,0.5,0.2,1.1,0.7,1.2c0.1,0,0.2,0,0.3,0 c0.4,0,0.8-0.3,1-0.7l0.5-1.9l1.8-1.1v2.1l-1.4,1.4c-0.4,0.4-0.4,1,0,1.4s1,0.4,1.4,0l1-1l1,1c0.2,0.2,0.5,0.3,0.7,0.3 s0.5-0.1,0.7-0.3c0.4-0.4,0.4-1,0-1.4L24,26.9v-2.1l1.8,1.1l0.5,1.9c0.1,0.4,0.5,0.7,1,0.7c0.1,0,0.2,0,0.3,0 c0.5-0.1,0.9-0.7,0.7-1.2l-0.4-1.4l1.4-0.4c0.5-0.1,0.9-0.7,0.7-1.2S29.3,23.4,28.7,23.6z">
-            </path>
-          </g>
-        </g>
-      </svg> <br> <br>
-      <h1>This Season</h1> <br> <br>
-      <p>BE READY TO CHANGE</p> <br> <br>
-      <button>Shop Women</button>
-    </div>
-    <div class="pic">
-      <img src="assets/images/women.jpg" alt="/">
-    </div>
-  </section>
+  <br>
 
+  <!-- Calories  -->
+
+  <div class="calories text-center p-5" id="calories">
+    <h1>Calories Calculator</h1>
+    <div class="calories d-flex align-items-center justify-content-center p-4">
+      <div class="container">
+        <h3 class="text-center">Enter your details to Calculate required Calories</h3>
+        <form class="d-flex flex-column align-items-center justify-content-center ">
+          <div class="mb-3">
+            <label for="age" class="form-label"><b>Age:</b></label>
+            <input type="number" class="form-control" id="age" name="age" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="gender"><b>Gender:</b></label>
+            <select id="gender" class="form-select" required>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="activity-level"><b>Activity Level:</b></label>
+            <select id="activity-level" class="form-select" required>
+              <option value="sedentary">Sedentary (little to no exercise)</option>
+              <option value="lightly-active">Lightly active (light exercise/sports 1-3 days/week)</option>
+              <option value="moderately-active">Moderately active (moderate exercise/sports 3-5 days/week)</option>
+              <option value="very-active">Very active (hard exercise/sports 6-7 days a week)</option>
+              <option value="extra-active">Extra active (very hard exercise/sports & physical job or 2x training)
+              </option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="height2" class="form-label"><b>Height:</b></label>
+            <input type="number" class="form-control" id="height2" name="height" placeholder="cm" required>
+          </div>
+          <div class="mb-3">
+            <label for="weight2" class="form-label"><b>Weight:</b></label>
+            <input type="number" class="form-control" id="weight2" name="weight" placeholder="kg" required>
+          </div>
+          <br>
+          <button type="button" class="btn btn-primary" onclick="calculateCalories()">Calculate</button>
+
+          <div id="result2" style="color: white; display: none;" class="mt-4">
+            <h2>Results</h2>
+            <p>Your daily calorie needs: <span id="calorie-result"></span> calories</p>
+          </div>
+        </form>
+      </div>
+      <div class="chart">
+        <h3>Weight Goals and Calorie Balance</h3> <br>
+        <table class="table table-bordered" id="table">
+          <thead>
+            <tr>
+              <th>Weight Goal</th>
+              <th>Calorie Surplus</th>
+              <th>Calorie Deficit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Lose 0.25 kg per week</td>
+              <td>-250</td>
+              <td>250</td>
+            </tr>
+            <tr>
+              <td>Lose 0.5 kg per week</td>
+              <td>-500</td>
+              <td>500</td>
+            </tr>
+            <tr>
+              <td>Lose 0.75 kg per week</td>
+              <td>-750</td>
+              <td>750</td>
+            </tr>
+            <tr>
+              <td>Lose 1 kg per week</td>
+              <td>-1000</td>
+              <td>1000</td>
+            </tr>
+            <tr>
+              <td>Maintain weight</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Gain 0.25 kg per week</td>
+              <td>250</td>
+              <td>-250</td>
+            </tr>
+            <tr>
+              <td>Gain 0.5 kg per week</td>
+              <td>500</td>
+              <td>-500</td>
+            </tr>
+            <tr>
+              <td>Gain 0.75 kg per week</td>
+              <td>750</td>
+              <td>-750</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <!-- Contact Us -->
+
+  <div class="container-fluid p-4" id="contactUs">
+    <h1>Contact Us</h1>
+    <p>"Have any questions or need assistance? We're just a click away!"</p>
+    <div class="item d-flex justify-content-evenly align-items-center flex-wrap">
+      <div class="box">
+        <h5>Mobile:</h5>
+        <h6 class="pb-4">+91 76961-*****</h6>
+        <h5>E-mail:</h5>
+        <h6 class="pb-4">harmeetxx7@gmail.com</h6>
+        <h5>Address:</h5>
+        <h6 class="pb-4">Ludhiana, Punjab, India</h6>
+      </div>
+      <div class="box">
+        <form>
+          <div class="mb-3">
+            <label for="emailMessage" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="emailMessage" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <!-- About Us -->
+
+  <div class="d-flex justify-content-center flex-wrap" id="aboutUs">
+    <div class="about">
+      <h1>About Us</h1>
+      <p>Welcome to our personal gym website, where fitness meets passion and dedication.
+        At our gym, we believe in empowering individuals to reach their fitness goals and lead a healthier lifestyle.
+        With state-of-the-art equipment, expert trainers, and a supportive community, we're here to inspire and guide
+        you on your fitness journey.</p>
+      <button class="btn btn-primary px-3">Read More</button>
+    </div>
+    <div>
+      <img style="height: 20rem;" class="img-fluid" src="./assets/img/pfp.png" alt="Profile">
+    </div>
+  </div>
+
+  <!-- Footer  -->
+
+  <footer class="bg-dark text-center text-white" id="footer">
+    <div class="container p-4 pb-0">
+      <section class="mb-4">
+        <!-- Instagram -->
+        <a class="btn btn-floating m-1" href="https://www.instagram.com/harmxxt_/" role="button"><svg width="1rem"
+            height="1rem" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path stroke="#ffffff" stroke-width="12"
+                d="M96 162c-14.152 0-24.336-.007-32.276-.777-7.849-.761-12.87-2.223-16.877-4.741a36 36 0 0 1-11.33-11.329c-2.517-4.007-3.98-9.028-4.74-16.877C30.007 120.336 30 110.152 30 96c0-14.152.007-24.336.777-32.276.76-7.849 2.223-12.87 4.74-16.877a36 36 0 0 1 11.33-11.33c4.007-2.517 9.028-3.98 16.877-4.74C71.663 30.007 81.847 30 96 30c14.152 0 24.336.007 32.276.777 7.849.76 12.87 2.223 16.877 4.74a36 36 0 0 1 11.329 11.33c2.518 4.007 3.98 9.028 4.741 16.877.77 7.94.777 18.124.777 32.276 0 14.152-.007 24.336-.777 32.276-.761 7.849-2.223 12.87-4.741 16.877a36 36 0 0 1-11.329 11.329c-4.007 2.518-9.028 3.98-16.877 4.741-7.94.77-18.124.777-32.276.777Z">
+              </path>
+              <circle cx="96" cy="96" r="30" stroke="#ffffff" stroke-width="12"></circle>
+              <circle cx="135" cy="57" r="9" fill="#ffffff"></circle>
+            </g>
+          </svg></a>
+
+        <!-- Snapchat -->
+        <a class="btn btn-floating m-1" href="https://www.snapchat.com/add/harmxxt?share_id=EHPMF8Ys5Pc&locale=en-IN"
+          role="button"><svg width="1rem" height="1rem" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg"
+            fill="none">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path stroke="#ffffff" stroke-linejoin="round" stroke-width="12"
+                d="M95.918 22.002c-11.963-.087-24.145 4.54-32.031 13.717-6.995 7.405-9.636 17.901-9.284 27.868-.03 5.119.032 10.237.05 15.355-4.901-1.217-9.873-4.624-15.063-2.937-4.422 1.313-6.267 7.088-3.596 10.791 2.876 3.761 7.346 5.907 11.08 8.71 1.837 1.5 4.313 2.571 5.68 4.499-.001 4.62-2.425 8.897-4.722 12.786-5.597 8.802-14.342 15.531-23.705 20.18-2.39 1.035-4.59 4.144-2.473 6.499 3.862 3.622 9.327 4.778 14.195 6.486 2.047.64 5.078 1.34 4.886 4.084.335 2.923 2.205 6.066 5.492 6.078 7.873.91 16.289.522 23.345 4.741 6.917 4.006 14.037 8.473 22.255 8.96 8.188.767 16.623-.888 23.642-5.255 5.23-2.884 10.328-6.477 16.456-7.061 5.155-1.206 10.702-.151 15.685-2.072 3.193-1.367 2.762-5.244 4.104-7.808 2.532-1.747 5.77-1.948 8.59-3.102 3.687-1.47 8.335-2.599 10.268-6.413 1.148-3.038-2.312-4.698-4.453-5.88-11.38-5.874-21.631-14.921-26.121-27.191-.496-1.936-2.279-4.834.084-6.255 4.953-4.176 11.413-6.575 15.514-11.715 3.103-3.884.941-10.55-4.141-11.322-4.928-.78-9.525 1.893-14.152 3.127-.404-8.53.502-17.232-.776-25.746-2.429-13.808-13.514-25.157-26.813-29.124-4.521-1.401-9.266-2.037-13.996-2Z">
+              </path>
+            </g>
+          </svg></a>
+
+        <!-- Twitter -->
+        <a class="btn btn-floating m-1" href="https://twitter.com/harmxxt_" role="button"><svg fill="#ffffff"
+            width="1rem" height="1rem" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M1643.825 518.606c-14.457 11.294-22.588 28.8-21.685 47.096.565 16.377 1.017 32.753 1.017 49.355 0 530.372-373.497 1079.153-998.513 1079.153-122.203 0-242.598-24.282-355.765-71.153 136.433-22.588 266.428-82.447 374.965-173.816 17.957-15.247 24.62-39.868 16.828-62.005-7.793-22.136-28.574-37.157-52.179-37.722-105.374-2.146-200.81-62.682-256.376-157.214 38.06-1.13 79.059-7.116 109.779-16.038 24.847-7.228 41.562-30.381 40.771-56.132-.903-25.863-19.2-47.774-44.499-53.308-112.15-24.282-194.71-116.781-222.607-243.84 32.076 6.438 62.344 8.47 79.06 8.922 24.62 2.711 47.322-14.456 55.453-38.06 8.02-23.492-.226-49.582-20.442-64.151-78.042-56.245-161.619-161.167-161.619-286.42 0-30.832 3.84-61.326 11.181-90.804 195.163 217.186 461.478 348.31 743.83 363.558 18.975 1.016 34.674-6.438 46.08-19.765 11.408-13.327 15.926-31.398 12.312-48.565-5.648-25.637-8.471-52.178-8.471-79.058 0-188.951 141.063-342.664 314.428-342.664 87.19 0 168.283 37.835 228.141 106.73 13.327 15.36 34.334 22.475 54.212 18.183 28.687-6.099 56.922-13.779 84.706-23.153-16.49 16.715-34.673 31.624-54.438 44.386-22.25 14.343-31.51 42.014-22.475 66.861s34.56 39.868 60.31 36.593c14.683-1.92 29.252-4.179 43.709-7.002-18.297 17.731-37.497 34.447-57.713 50.033m261.685-199.68c-16.716-18.636-43.596-23.83-66.41-13.214-4.066 1.92-8.132 3.84-12.31 5.76 17.054-30.269 30.946-62.683 40.997-96.678 6.777-22.588-1.242-46.984-20.103-61.214-18.974-14.118-44.5-15.247-64.49-2.485-58.277 37.384-120.96 64.828-186.466 82.108-78.268-76.8-181.948-120.17-289.355-120.17-235.595 0-427.37 204.424-427.37 455.606 0 9.487.227 18.974.791 28.348C626 564.008 390.517 424.977 226.64 208.469c-11.52-15.247-30.155-23.04-49.242-22.136-19.2 1.468-36.367 12.536-45.516 29.477-37.157 68.894-56.809 147.614-56.809 227.464 0 86.626 28.687 165.007 70.25 230.739-19.426 9.035-32.98 28.574-32.98 51.388v5.195c0 139.821 49.808 261.91 133.497 344.47-9.035 2.937-17.28 8.246-23.943 15.36a56.566 56.566 0 0 0-12.537 54.326c40.772 136.997 137.788 242.145 258.41 289.807-122.88 69.571-268.688 97.129-404.443 80.753-26.541-3.953-50.485 11.858-59.633 36.028-9.261 24.282-.677 51.84 20.781 66.522 179.69 123.784 387.276 189.29 600.17 189.29 695.717 0 1111.454-606.156 1111.454-1192.095 0-8.583-.113-17.054-.339-25.524 68.555-57.149 127.51-125.365 175.737-203.069 13.214-21.345 10.842-48.903-5.986-67.538"
+                fill-rule="evenodd"></path>
+            </g>
+          </svg></a>
+
+        <!-- Linkedin -->
+        <a class="btn btn-floating m-1" href="https://www.linkedin.com/in/harmxxt/" role="button"><svg fill="#ffffff"
+            version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="1rem" height="1rem" viewBox="0 0 552.77 552.77" xml:space="preserve">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <g>
+                <g>
+                  <path
+                    d="M17.95,528.854h71.861c9.914,0,17.95-8.037,17.95-17.951V196.8c0-9.915-8.036-17.95-17.95-17.95H17.95 C8.035,178.85,0,186.885,0,196.8v314.103C0,520.816,8.035,528.854,17.95,528.854z">
+                  </path>
+                  <path
+                    d="M17.95,123.629h71.861c9.914,0,17.95-8.036,17.95-17.95V41.866c0-9.914-8.036-17.95-17.95-17.95H17.95 C8.035,23.916,0,31.952,0,41.866v63.813C0,115.593,8.035,123.629,17.95,123.629z">
+                  </path>
+                  <path
+                    d="M525.732,215.282c-10.098-13.292-24.988-24.223-44.676-32.791c-19.688-8.562-41.42-12.846-65.197-12.846 c-48.268,0-89.168,18.421-122.699,55.27c-6.672,7.332-11.523,5.729-11.523-4.186V196.8c0-9.915-8.037-17.95-17.951-17.95h-64.192 c-9.915,0-17.95,8.035-17.95,17.95v314.103c0,9.914,8.036,17.951,17.95,17.951h71.861c9.915,0,17.95-8.037,17.95-17.951V401.666 c0-45.508,2.748-76.701,8.244-93.574c5.494-16.873,15.66-30.422,30.488-40.649c14.83-10.227,31.574-15.343,50.24-15.343 c14.572,0,27.037,3.58,37.393,10.741c10.355,7.16,17.834,17.19,22.436,30.104c4.604,12.912,6.904,41.354,6.904,85.33v132.627 c0,9.914,8.035,17.951,17.949,17.951h71.861c9.914,0,17.949-8.037,17.949-17.951V333.02c0-31.445-1.982-55.607-5.941-72.48 S535.836,228.581,525.732,215.282z">
+                  </path>
+                </g>
+              </g>
+            </g>
+          </svg></a>
+
+        <!-- Github -->
+        <a class="btn btn-floating m-1" href=https://github.com/HarmeetSingh69" role="button"><svg width="1rem"
+            height="1rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M9.29183 21V18.4407L9.3255 16.6219C9.36595 16.0561 9.58639 15.5228 9.94907 15.11C9.95438 15.1039 9.95972 15.0979 9.9651 15.0919C9.9791 15.0763 9.96988 15.0511 9.94907 15.0485V15.0485C7.52554 14.746 5.0005 13.7227 5.0005 9.26749C4.9847 8.17021 5.3427 7.10648 6.00437 6.27215C6.02752 6.24297 6.05103 6.21406 6.07492 6.18545V6.18545C6.10601 6.1482 6.11618 6.09772 6.10194 6.05134C6.10107 6.04853 6.10021 6.04571 6.09935 6.04289C6.0832 5.9899 6.06804 5.93666 6.05388 5.88321C5.81065 4.96474 5.86295 3.98363 6.20527 3.09818C6.20779 3.09164 6.21034 3.08511 6.2129 3.07858C6.22568 3.04599 6.25251 3.02108 6.28698 3.01493V3.01493C6.50189 2.97661 7.37036 2.92534 9.03298 4.07346C9.08473 4.10919 9.13724 4.14609 9.19053 4.18418V4.18418C9.22901 4.21168 9.27794 4.22011 9.32344 4.20716C9.32487 4.20675 9.32631 4.20634 9.32774 4.20593C9.41699 4.18056 9.50648 4.15649 9.59617 4.1337C11.1766 3.73226 12.8234 3.73226 14.4038 4.1337C14.4889 4.1553 14.5737 4.17807 14.6584 4.20199C14.6602 4.20252 14.6621 4.20304 14.6639 4.20356C14.7174 4.21872 14.7749 4.20882 14.8202 4.17653V4.17653C14.8698 4.14114 14.9187 4.10679 14.967 4.07346C16.6257 2.92776 17.4894 2.9764 17.7053 3.01469V3.01469C17.7404 3.02092 17.7678 3.04628 17.781 3.07946C17.7827 3.08373 17.7843 3.08799 17.786 3.09226C18.1341 3.97811 18.1894 4.96214 17.946 5.88321C17.9315 5.93811 17.9159 5.9928 17.8993 6.04723V6.04723C17.8843 6.09618 17.8951 6.14942 17.9278 6.18875C17.9289 6.18998 17.9299 6.19121 17.9309 6.19245C17.9528 6.21877 17.9744 6.24534 17.9956 6.27215C18.6573 7.10648 19.0153 8.17021 18.9995 9.26749C18.9995 13.747 16.4565 14.7435 14.0214 15.015V15.015C14.0073 15.0165 14.001 15.0334 14.0105 15.0439C14.0141 15.0479 14.0178 15.0519 14.0214 15.0559C14.2671 15.3296 14.4577 15.6544 14.5811 16.0103C14.7101 16.3824 14.7626 16.7797 14.7351 17.1754V21"
+                stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path
+                d="M4 17C4.36915 17.0523 4.72159 17.1883 5.03065 17.3975C5.3397 17.6068 5.59726 17.8838 5.7838 18.2078C5.94231 18.4962 6.15601 18.7504 6.41264 18.9557C6.66927 19.161 6.96379 19.3135 7.27929 19.4043C7.59478 19.4952 7.92504 19.5226 8.25112 19.485C8.5772 19.4475 8.89268 19.3457 9.17946 19.1855"
+                stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+          </svg></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      © 2023 Copyright:
+      <a class="text-white" href="#">Harmeet Singh</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+    </script>
 </body>
-<script>
-  const toggleButton = document.getElementsByClassName('toggler')[0]
-  const navbarLinks = document.getElementsByClassName('nav-links')[0]
-  const navbarLinks2 = document.getElementsByClassName('nav-btns')[0]
 
-  toggleButton.addEventListener('click', () => {
-    navbarLinks.classList.toggle('active')
-    navbarLinks2.classList.toggle('active')
-  })
+<script>
+  function calculateBMI() {
+    var height = parseFloat(document.getElementById("height").value);
+    var weight = parseFloat(document.getElementById("weight").value);
+
+    let bmi = weight / ((height / 100) ** 2);
+
+    var resultElement = document.getElementById("result");
+    resultElement.innerHTML = "Your BMI is: " + bmi.toFixed(2);
+  }
+
+  function calculateCalories() {
+    var weight = parseFloat(document.getElementById('weight2').value);
+    var height = parseFloat(document.getElementById('height2').value);
+    var age = parseInt(document.getElementById('age').value);
+    var gender = document.getElementById('gender').value;
+    var activityLevel = document.getElementById('activity-level').value;
+
+    var bmr = 0;
+
+    if (gender === 'male') {
+      bmr = 10 * weight + 6.25 * height - 5 * age + 5;
+    } else if (gender === 'female') {
+      bmr = 10 * weight + 6.25 * height - 5 * age - 161;
+    }
+
+    var calorieNeeds = 0;
+
+    switch (activityLevel) {
+      case 'sedentary':
+        calorieNeeds = bmr * 1.2;
+        break;
+      case 'lightly-active':
+        calorieNeeds = bmr * 1.375;
+        break;
+      case 'moderately-active':
+        calorieNeeds = bmr * 1.55;
+        break;
+      case 'very-active':
+        calorieNeeds = bmr * 1.725;
+        break;
+      case 'extra-active':
+        calorieNeeds = bmr * 1.9;
+        break;
+    }
+
+    document.getElementById('calorie-result').textContent = calorieNeeds.toFixed(2);
+    document.getElementById('result2').style.display = 'block';
+  }
 </script>
 
 </html>
