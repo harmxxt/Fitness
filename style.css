@@ -110,6 +110,7 @@ textarea{
 @media screen and (max-width: 768px) {
   .about{
     width: 100vw;
+    padding: 3rem;
   }
   .bmi{
     flex-direction: column;
@@ -122,5 +123,9 @@ textarea{
   }
   .calories input[type=number]{
     width: 8rem;
+  }
+  #logo{
+    height: 12rem;
+    margin: 2rem;
   }
 }
